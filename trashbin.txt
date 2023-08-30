@@ -1,0 +1,667 @@
+// C++ program to implement Priority Queue
+// using Arrays
+
+ 
+                           
+ 
+
+                      
+ 
+
+                     
+ 
+
+    // construct an `M × N` matrix to keep track of visited cells
+ 
+
+
+// Wrapper over findShortestPath() function
+ 
+
+    // backtrack: remove (i, j) from the visited matrix
+ 
+
+    // go to the left cell
+ 
+
+    // go to the top cell
+ 
+
+    // go to the right cell
+ 
+
+    // go to the bottom cell
+ 
+
+    // set (i, j) cell as visited
+ 
+
+
+// Check if it is possible to go to (x, y) from the current position. The
+// function returns false if the cell has value 0 or already visited
+ 
+
+
+    // store the entire pascal's triangle:
+ 
+// calculate the rest of the elements:
+ 
+// inserting the 1st element
+ 
+ // Printing the rest of the part:
+ 
+// printing 1st element
+ 
+// row number
+ 
+// col number
+ 
+
+
+    // calculating nCr:
+ 
+long long 
+ 
+
+
+    // Enqueue current item (to rear)
+ 
+
+
+    // Reverse remaining queue
+ 
+
+
+    // Dequeue current item (from front)
+ 
+<long long int>
+ 
+
+    // Base case
+ 
+ s1.pop();
+ 
+deQueue
+ 
+class Stack
+{
+public:
+    Node *top;
+    Stack()
+    {
+        top = NULL;
+    }
+    void push(int element)
+    {
+        Node *temp = new Node(element);
+        if (!temp)
+        {
+            cout << "Stack overflow" << endl;
+        }
+        temp->data = element;
+        temp->next = top;
+        top = temp;
+    }
+    void pop()
+    {
+        if (top == NULL)
+        {
+            cout << "Stack underflow" << endl;
+        }
+        else
+        {
+            Node *temp = top;
+            top = top->next;
+            temp->next = NULL;
+            delete temp;
+        }
+    }
+    bool isEmpty()
+    {
+        if (top == NULL)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    int peek()
+    {
+        if (isEmpty())
+        {
+            cout << "Empty" << endl;
+        }
+        else
+        {
+            return top->data;
+        }
+    }
+};
+ 
+<int>
+ 
+// CPP program to implement Queue using
+// two stacks with costly enQueue()
+
+ 
+struct
+ 
+
+        // Move all elements from s1 to s2
+ 
+
+
+        // Push item into s1
+ 
+
+
+        // Push everything back to s1
+ 
+
+    // Dequeue an item from the queue
+ 
+
+        // if first stack is empty
+ 
+
+
+        // Return top of s1
+ 
+
+// Driver code
+ 
+56789
+ 
+// normal flow
+ 
+// to maintain cyclic nature
+ 
+// single element is present
+ 
+/ to check queue is empty
+            // cout << "Queue is Empty " << endl;
+ 
+ // Dequeues top element from queue. Returns -1 if the stack is empty, otherwise returns the popped element.
+ 
+// push inside the queue
+ 
+// normal flow
+ 
+// to maintain cyclic nature
+ 
+// first element to push
+ 
+// cout << "Queue is Full";
+ 
+// to check whther queue is full
+ 
+
+    // Enqueues 'X' into the queue. Returns true if it gets pushed into the stack, and false otherwise.
+ 
+
+    // Initialize your data structure.
+ 
+ //
+ 
+//
+ 
+  // Returns true if the deque is full. Otherwise returns false.
+ 
+ // Returns true if the deque is empty. Otherwise returns false.
+ 
+
+    // Returns the last element of the deque. If the deque is empty, it returns -1.
+ 
+  // Returns the first element of the deque. If the deque is empty, it returns -1.
+ 
+ // normal flow
+ 
+// to maintain cyclic nature
+ 
+// single element is present
+ 
+// to check queue is empty
+            // cout << "Queue is Empty " << endl;
+ 
+// Pops an element from the back of the deque. Returns -1 if the deque is empty, otherwise returns the popped element.
+ 
+// normal flow
+ 
+ // to maintain cyclic nature
+ 
+// single element is present
+ 
+// to check queue is empty
+            // cout << "Queue is Empty " << endl;
+ 
+ // Pops an element from the front of the deque. Returns -1 if the deque is empty, otherwise returns the popped element.
+ 
+    // Pushes 'X' in the back of the deque. Returns true if it gets pushed into the deque, and false otherwise.
+ 
+  // check full or not
+ 
+   // Pushes 'X' in the front of the deque. Returns true if it gets pushed into the deque, and false otherwise.
+ 
+    // Initialize your data structure.
+ 
+ for (int i = v.size() - 1; i >= 0; i--)
+    {
+        q.push(v[i]);
+    }
+ 
+v.push_back
+ 
+vector<int> v;
+ 
+void
+ 
+  // 
+ 
+iostream
+ 
+Queue ans=
+ 
+Queue ans=
+ 
+Stack
+ 
+cout << "Empty" << endl;
+        }
+ 
+}else{
+ 
+minhaj
+ 
+<int> 
+ 
+ Stack st(5);
+    st.push(1);
+    st.push(2);
+    st.push(5);
+    st.push(3);
+    st.push(2);
+ 
+ int 
+ 
+<int>
+ 
+nextGreaterElement(vector<int> & arr, int n)
+    {
+        stack<int> st;
+        st.push(-1);
+        vector<int> v(n);
+        for (int i = n - 1; i >= 0; i--)
+        {
+
+            while (!st.empty() && st.top() <= arr[i])
+            {
+                st.pop();
+            }
+            if (st.empty())
+            {
+                v[i] = -1;
+            }
+            else
+            {
+                v[i] = (st.top());
+            }
+            st.push(arr[i]);
+        }
+        return v;
+    }
+    
+ 
+vector<int>
+ 
+st.push(ele);
+ 
+cnt, 
+ 
+
+    int cnt = 1;
+ 
+
+    // st.push(3);
+    //  st.push(4);
+    //  st.push(5);
+    //  st.pop();
+    //  cout << st.isEmpty();
+    //  cout << st.peek();
+ 
+cnt + 1,
+ 
+ st.pop();
+ 
+cnt == (st.size) / 2
+ 
+int cnt,
+ 
+delMiddle
+ 
+// Maximum size of the queue
+ 
+ Stack() : q(size){};
+ 
+ Queue(int s)
+    {
+        size = s;
+        
+        rear = 0;
+        front = 0;
+    }
+ 
+ << boolalpha 
+ 
+<< boolalpha 
+ 
+private:
+ 
+<int>
+ 
+UsingQueue
+ 
+UsingQueue
+ 
+// Output: true
+ 
+ // Output: false
+ 
+// Output: 2
+ 
+// Output: 3
+ 
+ // Stack is empty
+ 
+ /
+ 
+ // Push the new element into the queue
+
+        // Rotate the queue elements to bring the new element to the front
+ 
+/ Get the current size of the queue
+        //cout << size;
+ 
+s.pop();
+ 
+Queue
+ 
+#include <bits/stdc++.h>
+
+using namespace std;
+ 
+<int>
+ 
+<int> 
+ 
+
+int main()
+{
+    Queue q(5);
+    q.push(1);
+    q.push(2);
+    q.pop();
+    q.pop();
+    cout << q.isEmpty() << endl;
+    cout << q.fron();
+}
+ 
+/* Program to implement a stack using
+two queue */
+
+ 
+   // Two inbuilt queues
+ 
+  // Push x first in empty q2
+ 
+
+        // Push all the remaining
+        // elements in q1 to q2.
+ 
+
+        // swap the names of two queues
+ 
+
+        // if no elements are there in q1
+ 
+
+// Driver code
+ 
+
+// This code is contributed by Chhavi
+ 
+Stack
+ 
+
+
+// Driver code
+ 
+
+
+        // Return top of s1
+ 
+
+        // if first stack is empty
+ 
+
+
+    // Dequeue an item from the queue
+ 
+
+
+        // Push everything back to s1
+ 
+
+
+        // Push item into s1
+ 
+
+        // Move all elements from s1 to s2
+ 
+// CPP program to implement Queue using
+// two stacks with costly enQueue()
+#include <bits/stdc++.h>
+using namespace std;
+ 
+<int>
+ 
+struct
+ 
+
+    int cnt = 1;
+ 
+str.length()
+ 
+
+void reverseWords(string str, int size)
+{
+    Stack st(size);
+    for (int i = 0; i < str.length(); ++i)
+    {
+        if (str[i] != ' ')
+            st.push(str[i]);
+        else
+        {
+            while (st.isEmpty() == false)
+            {
+                cout << (char)st.peek();
+                st.pop();
+            }
+            cout << " ";
+        }
+    }
+}
+ 
+NULL
+ 
+str.length()
+ 
+
+void printStack(Stack st)
+{
+    cout << "Stack: ";
+    for (int i = st.top; i >= 0; i--)
+    {
+        cout << st.arr[i] << " ";
+    }
+    cout << endl;
+}
+ 
+
+    printStack(st);
+ 
+<char>
+ 
+cnt, 
+ 
+ Stack st(5);
+    st.push(1);
+    st.push(2);
+    // st.push(3);
+    //  st.push(4);
+    //  st.push(5);
+    //  st.pop();
+    //  cout << st.isEmpty();
+    //  cout << st.peek();
+ 
+
+
+    // Traverse given string and push all characters
+    // to stack until we see a space.
+ 
+
+
+        // When we see a space, we print contents
+        // of stack.
+ 
+
+
+    // Since there may not be space after
+    // last word.
+    while (st.empty() == false)
+    {
+        cout << st.top();
+        st.pop();
+    }
+ 
+
+    delete sortedMerged;
+ 
+<int>
+ 
+<int>
+ 
+<int>
+ 
+<int>
+ 
+<int> 
+ 
+
+************************************************************ /
+ 
+
+    T data;
+ 
+narySearch.exe
+ 
+/************************************************************
+
+    Following is the linked list node structure.
+    
+    template <typename T>
+ 
+  // Clean up memory
+    delete originalHead; // This will automatically delete the entire linked list due to the destructor
+    delete clonedHead;
+ 
+andom
+ 
+Node *uniqueSortedList(Node *&head)
+{
+    if (head == NULL || head->next == NULL)
+    {
+        return NULL; // Empty or single-node list has no duplicates
+    }
+
+    Node *curr = head;
+
+    while (curr->next != NULL)
+    {
+        if (curr->data == curr->next->data)
+        {
+            Node *nodeToDelete = curr->next;
+            curr->next = curr->next->next;
+            delete nodeToDelete;
+        }
+        else // not equal
+        {
+            curr = curr->next;
+        }
+    }
+    return head;
+}
+ 
+  Node *newHead = uniqueSortedList(head);
+    print(newHead);
+ 
+void
+ 
+// C++ recursive function to
+// solve tower of hanoi puzzle
+
+ 
+NULL
+ 
+return head;
+ 
+Node *
+ 
+Node *
+ 
+
+
+    Following is the linked list node structure.
+    
+ 
+/************************************************************
+ 
+************************************************************/
+ 
+public:
+ 
+Solution
+ 
+};
+ 
+public:
+ 
+rivate
+ 
+ // step 1: Create a Clone List
+ 
+
+
+        // step 2: insert nodes of Clone List in between originalList
+ 
+print(stack);
+ 
+void print(Stack st)
+{
+    cout << "Stack: ";
+    for (int i = st.top; i >= 0; i--)
+    {
+        cout << st.arr[i] << " ";
+    }
+    cout << endl;
+}
+ 
+ // Return a placeholder value in case of an empty stack
+ 
+// Return a placeholder value in case of an empty stack
+ 
+// Return a placeholder value in case of an empty stack
+ 
+// Found the complete substring, so exit inner loop
+ 
